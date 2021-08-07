@@ -2,14 +2,31 @@
 /* Write your global styles here, in PostCSS syntax */
 body {
     background-color: #000;
-
+    overflow-x: hidden;
+    font-family: Inter;
 }
 .fuzestroke {
-      text-shadow:
-   -1px -1px 0 #FFF,  
-    1px -1px 0 #FFF,
-    -1px 1px 0 #FFF,
-     1px 1px 0 #FFF;
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+       -1px  1px 0 #FFF,
+        1px  1px 0 #FFF;
+}
+h6 {
+    text-transform: uppercase;
+    font-size: 9pt;
+}
+h2 {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-top: 2rem;
+    line-height: 1.2;
+}
+p {
+    margin-top: 1rem;
+    line-height: 1.6;
+    opacity: 0.7;
+    font-weight: 300;
 }
 @tailwind components;
 @tailwind utilities

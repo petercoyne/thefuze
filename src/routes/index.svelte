@@ -4,22 +4,27 @@
 
     <div class="z-20" style="grid-area: 1/1/1/1; margin-top: 10%">
         <img src="logo.png" alt="" class="z-20 mx-auto w-2/3 sm:w-1/3 mt-8 sm:mt-0"/>
-        <nav class="mx-auto flex justify-around fuzestroke w-2/3 sm:w-1/3 text-sm">
-            <a href="#" class="flex p-2 rounded-md bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25">
-                <img src="bio.svg" alt="" class="w-5 h-5 mr-2">
+        <nav class="mx-auto flex justify-around items-center fuzestroke w-2/3 sm:w-1/3 text-sm lg:text-lg">
+            <a href="#" class="flex items-center p-2 rounded-md bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25">
+                <img src="bio.svg" alt="" class="w-5 h-5 mr-2 lg:w-7 lg:h-7">
                 <div class="inline">Bio</div>
             </a>
-            <a href="#" class="flex p-2 rounded-md hover:bg-black hover:bg-opacity-25">
-                <img src="listen.svg" alt="" class="w-5 h-5 mr-2">
+            <a href="#" class="flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25">
+                <img src="listen.svg" alt="" class="w-5 h-5 mr-2 lg:w-7 lg:h-7">
                 <div>Listen</div>
             </a>
             <a href="#" class="p-2 rounded-md hover:bg-black hover:bg-opacity-25">
-                <img src="sc.svg" alt="" class="w-7 h-5"/>
+                <img src="sc.svg" alt="" class="w-7 h-5 lg:w-9 lg:h-7"/>
             </a>
             <a href="#" class="p-2 rounded-md hover:bg-black hover:bg-opacity-25">
-                <img src="insta.svg" alt="" class="w-5 h-5"/>
+                <img src="insta.svg" alt="" class="w-5 h-5 lg:w-7 lg:h-7"/>
             </a>
         </nav>
     </div>
 </div>
-<div class="max-w-screen-lg mx-auto border-t-2 border-gray-800 bg-gray-900 h-12"></div>
+<div class="max-w-screen-lg mx-auto border-t-2 border-gray-600 bg-black text-white p-8 h-full"
+    style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
+    <h6 class="text-gray-500">The Fuze : <b>Bio</b></h6>
+    <h2 class="text-gray-200">The Fuze were a band from the west of Ireland</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error ipsam obcaecati expedita earum soluta veritatis quaerat aliquam facilis ipsum temporibus, laborum saepe debitis ad. Inventore, hic natus. Suscipit, reiciendis?</p>
+</div>
