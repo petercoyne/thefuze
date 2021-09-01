@@ -91,9 +91,8 @@
     
     </script>
     
-<div class="m-4 rounded-xl bg-black text-white fixed bottom-0 right-0 z-30 overflow-y-scroll max-h-screen"
+<div class="m-4 shadow-2xl rounded-xl border border-gray-700 bg-black text-white fixed bottom-0 right-0 z-30 overflow-y-scroll max-h-screen"
     style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
-
         
     {#if showPlaylist}
     <div class="flex pt-6" transition:slide >
@@ -122,7 +121,7 @@
     
         <div class="flex items-center" transition:slide>
             
-            <div class="flex-grow cursor-pointer" on:click={playPause}>{ currentTrackName }</div>
+            <div class="flex-grow cursor-pointer text-xs" on:click={playPause}>{ currentTrackName }</div>
 
             <button on:click={rw} class:text-gray-500={currentTrack <= 0}>
                 <svg class="w-8 h-8 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path></svg>

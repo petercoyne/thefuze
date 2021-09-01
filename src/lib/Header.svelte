@@ -3,8 +3,8 @@
 </script>
 
 <div class="w-full grid grid-cols-1 grid-rows-1 max-w-screen-lg mx-auto border-b border-gray-600">
-    <img src="/bg1crop2.webp" alt="" class="z-0 sm:hidden" style="grid-area: 1/1/1/1; min-width: 200%; margin-left: -50%"/>
-    <img src="/bg1crop2.webp" alt="" class="z-0 sm:block hidden" style="grid-area: 1/1/1/1"/>
+    <img src="/bg1crop-purp.webp" alt="" class="z-0 sm:hidden" style="grid-area: 1/1/1/1; min-width: 200%; margin-left: -50%"/>
+    <img src="/bg1crop-purp.webp" alt="" class="z-0 sm:block hidden" style="grid-area: 1/1/1/1"/>
 
     <div class="z-20" style="grid-area: 1/1/1/1; margin-top: 12%">
         <img src="/logo.png" alt="" class="z-20 mx-auto w-2/3 sm:w-1/3 mt-8 sm:mt-0"/>
