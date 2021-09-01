@@ -7,7 +7,7 @@
     var wavesurfer;
     
     let currentTrack = -1;
-    let currentTrackName = "Click to listen";
+    let currentTrackName = "🔊 Listen Now";
     let hidePlayer = true;
     let isPlaying = false;
     
@@ -64,8 +64,8 @@
         console.log("On Mount called");
         wavesurfer = WaveSurfer.create({
             container: '#waveform',
-            waveColor: '#428bca',
-            progressColor: '#001F41',
+            waveColor: '#F59E0B',
+            progressColor: '#B45309',
             height: 32,
             barWidth: 2
         });
@@ -91,7 +91,7 @@
     
     </script>
     
-<div class="m-4 shadow-2xl rounded-xl border border-gray-700 bg-black text-white fixed bottom-0 right-0 z-30 overflow-y-scroll max-h-screen"
+<div class="border-t border-gray-700 bg-black text-white fixed bottom-0 right-0 left-0 z-30 overflow-y-scroll max-h-screen"
     style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
         
     {#if showPlaylist}
@@ -112,19 +112,12 @@
 
     <div class="p-6 sticky bottom-0 bg-black" style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
         <!-- <h6 class="text-gray-200 pb-3">Music</h6> -->
-        <div
-            id="waveform"
-            class:hidden={hidePlayer === true}
-            transition:slide>
-            <!-- Here be waveform -->
-        </div>
+
     
         <div class="flex items-center" transition:slide>
             
-            <div class="flex-grow cursor-pointer text-xs" on:click={playPause}>{ currentTrackName }</div>
-
             <button on:click={rw} class:text-gray-500={currentTrack <= 0}>
-                <svg class="w-8 h-8 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path></svg>
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path></svg>
             </button>
     
             <button id="playPause" on:click={playPause}>
@@ -138,6 +131,18 @@
             <button on:click={ff} class:text-gray-500={currentTrack + 1 >= tracks.length || currentTrack == -1}>
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"></path></svg>
             </button>
+
+            <div class="cursor-pointer text-s mx-4" on:click={playPause}>
+                <div class="text-xs uppercase text-gray-700">The Fuze</div>
+                <div>{ currentTrackName }</div>
+            </div>
+
+            <div
+                id="waveform"
+                class="flex-grow"
+                transition:slide>
+                <!-- Here be waveform -->
+            </div>
     
             <div class="hidden sm:inline text-xs cursor-pointer text-gray-500 ml-4" on:click={togglePlaylist}>
                 {#if showPlaylist}

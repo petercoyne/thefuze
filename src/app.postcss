@@ -27,11 +27,16 @@ p {
     line-height: 1.8;
     font-weight: 300;
 }
+
+.nav-active {
+    @apply bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25;
+}
+.nav-link {
+    @apply flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25;
+}
+
+a {
+    @apply text-blue-400;
+}
 @tailwind components;
 @tailwind utilities;
-.nav-active {
-      @apply bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25;
-  }
-  .nav-link {
-      @apply flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25;
-}

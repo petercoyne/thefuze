@@ -2,7 +2,7 @@
     import { page } from '$app/stores';
 </script>
 
-<div class="w-full grid grid-cols-1 grid-rows-1 max-w-screen-lg mx-auto border-b border-gray-600">
+<div class="w-full grid grid-cols-1 grid-rows-1 max-h-screen">
     <img src="/bg1crop-purp.webp" alt="" class="z-0 sm:hidden" style="grid-area: 1/1/1/1; min-width: 200%; margin-left: -50%"/>
     <img src="/bg1crop-purp.webp" alt="" class="z-0 sm:block hidden" style="grid-area: 1/1/1/1"/>
 
