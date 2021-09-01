@@ -28,4 +28,10 @@ p {
     font-weight: 300;
 }
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+.nav-active {
+      @apply bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25;
+  }
+  .nav-link {
+      @apply flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25;
+}
