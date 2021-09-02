@@ -67,7 +67,8 @@
             waveColor: '#F59E0B',
             progressColor: '#B45309',
             height: 32,
-            barWidth: 2
+            barWidth: 2,
+            backend: 'MediaElement'
         });
     
         wavesurfer.on('ready', function() {
@@ -145,20 +146,16 @@
             </div>
     
             <div class="hidden sm:inline text-xs cursor-pointer text-gray-500 ml-4" on:click={togglePlaylist}>
-                {#if showPlaylist}
-                    <span>track list</span>
-                {:else}
-                    <span>track list</span>
-                {/if}
+                <span>track list</span>
             </div>
 
             <div class="cursor-pointer ml-4" on:click={togglePlaylist}> 
                 {#if showPlaylist}
                     <!-- <svg class="w-8 h-8 ml-4" fill="none" stroke="red" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> -->
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                    {:else}
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                               {/if}
+                {:else}
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                {/if}
             </div>
         </div>
     </div>
