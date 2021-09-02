@@ -133,7 +133,7 @@
             </button>
 
             <div class="cursor-pointer text-s mx-4" on:click={playPause}>
-                <div class="text-xs uppercase text-gray-700">The Fuze</div>
+                <div class="text-xs uppercase text-gray-400">The Fuze</div>
                 <div>{ currentTrackName }</div>
             </div>
 

@@ -1,5 +1,8 @@
 @tailwind base;
 /* Write your global styles here, in PostCSS syntax */
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #000;
     overflow-x: hidden;
@@ -33,6 +36,10 @@ p {
 }
 .nav-link {
     @apply flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25;
+}
+
+nav .active {
+    @apply bg-gray-800 rounded-md;
 }
 
 a {

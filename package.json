@@ -26,6 +26,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"simple-scrollspy": "^2.1.0",
+		"svelte-scrollto": "^0.2.0",
 		"wavesurfer.js": "^5.2.0"
 	}
 }
