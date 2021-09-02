@@ -61,7 +61,7 @@
     }
     
     onMount(() => {
-        console.log("On Mount called");
+
         wavesurfer = WaveSurfer.create({
             container: '#waveform',
             waveColor: '#F59E0B',
