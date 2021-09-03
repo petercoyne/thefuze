@@ -96,7 +96,7 @@
     style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
         
     {#if showPlaylist}
-    <div class="flex pt-6" transition:slide >
+    <div class="flex pt-6 overflow-auto overscroll-contain" transition:slide>
         <div class="hidden sm:block pl-6"><img src="bftp.jpg" alt="A Blast from the Past" class="w-24"></div>
         <ul class="px-6 flex-grow">
             {#each tracks as { name, src }, i}
@@ -111,31 +111,31 @@
     </div>
     {/if}
 
-    <div class="p-6 sticky bottom-0 bg-black" style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
+    <div class="sticky bottom-0 bg-black" style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
         <!-- <h6 class="text-gray-200 pb-3">Music</h6> -->
 
     
         <div class="flex items-center" transition:slide>
             
             <button on:click={rw} class:text-gray-500={currentTrack <= 0}>
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path></svg>
+                <svg class="w-14 h-16 pl-4 py-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path></svg>
             </button>
     
             <button id="playPause" on:click={playPause}>
                 {#if !isPlaying}
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg class="w-14 h-16 p-2 px-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 {:else}
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg class="w-14 h-16 p-2 px-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 {/if}
             </button>
     
             <button on:click={ff} class:text-gray-500={currentTrack + 1 >= tracks.length || currentTrack == -1}>
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"></path></svg>
+                <svg class="w-14 h-16 py-3 pr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"></path></svg>
             </button>
 
-            <div class="cursor-pointer text-s mx-4" on:click={playPause}>
+            <div class="cursor-pointer text-s px-0 h-16 flex flex-col justify-center pr-4 md:pl-6" on:click={playPause}>
                 <div class="text-xs uppercase text-gray-400">The Fuze</div>
-                <div>{ currentTrackName }</div>
+                <div class="text-xs sm:text-sm">{ currentTrackName }</div>
             </div>
 
             <div
@@ -145,16 +145,17 @@
                 <!-- Here be waveform -->
             </div>
     
-            <div class="hidden sm:inline text-xs cursor-pointer text-gray-500 ml-4" on:click={togglePlaylist}>
-                <span>track list</span>
-            </div>
 
-            <div class="cursor-pointer ml-4" on:click={togglePlaylist}> 
+
+            <div class="cursor-pointer text-gray-500 hover:text-blue-300 flex" on:click={togglePlaylist}>
+                <div class="hidden sm:flex flex-col justify-center h-16 text-xs cursor-pointer  ml-4" on:click={togglePlaylist}>
+                    <div>track list</div>
+                </div>
                 {#if showPlaylist}
                     <!-- <svg class="w-8 h-8 ml-4" fill="none" stroke="red" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-16 h-16 p-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 {:else}
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                    <svg class="w-16 h-16 p-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                 {/if}
             </div>
         </div>

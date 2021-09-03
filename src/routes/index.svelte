@@ -2,6 +2,7 @@
     import scrollSpy from 'simple-scrollspy'
     import { onMount } from 'svelte'
     import { fade } from 'svelte/transition';
+    import { Lightbox } from 'svelte-lightbox';
 
     const options = {
         sectionClass: '.scrollsection',           // Query selector to your sections
@@ -25,7 +26,7 @@
                 <a href="#1979" class="block p-2 ml-2">1979<br/><span class="text-gray-400 text-xs">Front Man Wanted</span></a>
                 <a href="#1980" class="block p-2 ml-2">1980<br/><span class="text-gray-400 text-xs">The Fuze Set Carousel Alight</span></a>
             </div>
-            <a href="#timeline" class="block text-xl my-2 px-1">Lineup</a>
+            <a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
         </nav>
     </div>
 
@@ -44,7 +45,13 @@
     
             <div class="px-8 text-gray-300">
                 <p class="mb-4">You could say it was heady, and it was. First a charity gig in the new Physics Hall. Idol virgins through sound. On into the future. The buzz man, the buzz. New Irish rock. The timing sweet and our own making it happen. Power, performance, energy. Something could explode, hear.</p>
-                <p class="mb-4"><img src="/images/rockstars.jpg" alt="The Fuze" class="w-full sm:w-1/2 float-left pb-4 sm:pr-8"/>You've gotta remember the late seventies and early eighties - because a fierce lot can't. The whole Galway of the Vibes thing birthing free-range students from its universal Cellar Bar, Lounge or Downstairs. Pre-conscious consciousness at its purest. Seven pints and a glass of Guinness. Two pints of Smithwicks and a pint of Harp, Sean, please (to dull the stench of corruption outside). And while you're at it, four Black Russians.</p>
+                <div class="mb-4 leading-7 font-light">
+                    <Lightbox thumbnail description="The Fuze">
+                        <img slot="thumbnail" src="/images/rockstars.jpg" class="w-full sm:w-2/3 float-right mb-4 sm:ml-8 sm:-mr-8 rounded-md border border-gray-700" alt="The Fuze">
+                        <img slot="image" class="w-screen max-h-screen" src="/images/rockstars.jpg" alt="The Fuze">
+                    </Lightbox>
+                    You've gotta remember the late seventies and early eighties - because a fierce lot can't. The whole Galway of the Vibes thing birthing free-range students from its universal Cellar Bar, Lounge or Downstairs. Pre-conscious consciousness at its purest. Seven pints and a glass of Guinness. Two pints of Smithwicks and a pint of Harp, Sean, please (to dull the stench of corruption outside). And while you're at it, four Black Russians.
+                </div>
                 <p class="mb-4">And love was all around. Love of the truths shared in rocking the foundations. Coming, going, starting to leave. All the time trying to be faithful to an unhappy country.</p>
                 <p>And the band became all. Careers and studies were abandoned. PA, lights and instruments leased. Engineers and roadies hired (and highered - if you'll excuse the expression). The ballrooms of Ireland throbbwed to one, last capacity crowd. Summer of eighty-one and Sunday Morning was happening ten times a day on Radio 2. The lads gigging six nights a week from Donegal to Dublin.</p>    
             </div>
