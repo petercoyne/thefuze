@@ -13,7 +13,7 @@
     });
 </script> 
 
-<img src="band-bftp.jpg" alt="The Band" class="w-full"/>
+<img src="/band-bftp.jpg" alt="The Band" class="w-full mb-8"/>
 <div class="flex max-w-screen-lg mx-auto">
     <div id="sidebar" transition:fade class="hidden md:block p-4 w-48 flex-shrink-0 text-gray-300">
         <nav id="main-menu" class="p-4 pr-0 pt-12 sticky top-0">
@@ -30,6 +30,7 @@
     </div>
 
     <div id="thecontent" class="max-w-screen-md mb-48 flex-grow min-w-0">
+        <span id="maincontent" class="scrollsection"></span>
 
         <section id="thefuze" class="mt-16 scrollsection">
 
@@ -42,9 +43,9 @@
             <hr class="border-gray-700 my-8" />
     
             <div class="px-8 text-gray-300">
-                <p>You could say it was heady, and it was. First a charity gig in the new Physics Hall. Idol virgins through sound. On into the future. The buzz man, the buzz. New Irish rock. The timing sweet and our own making it happen. Power, performance, energy. Something could explode, hear.</p>
-                <p>You've gotta remember the late seventies and early eighties - because a fierce lot can't. The whole Galway of the Vibes thing birthing free-range students from its universal Cellar Bar, Lounge or Downstairs. Pre-conscious consciousness at its purest. Seven pints and a glass of Guinness. Two pints of Smithwicks and a pint of Harp, Sean, please (to dull the stench of corruption outside). And while you're at it, four Black Russians.</p>
-                <p>And love was all around. Love of the truths shared in rocking the foundations. Coming, going, starting to leave. All the time trying to be faithful to an unhappy country.</p>
+                <p class="mb-4">You could say it was heady, and it was. First a charity gig in the new Physics Hall. Idol virgins through sound. On into the future. The buzz man, the buzz. New Irish rock. The timing sweet and our own making it happen. Power, performance, energy. Something could explode, hear.</p>
+                <p class="mb-4"><img src="/images/rockstars.jpg" alt="The Fuze" class="w-full sm:w-1/2 float-left pb-4 sm:pr-8"/>You've gotta remember the late seventies and early eighties - because a fierce lot can't. The whole Galway of the Vibes thing birthing free-range students from its universal Cellar Bar, Lounge or Downstairs. Pre-conscious consciousness at its purest. Seven pints and a glass of Guinness. Two pints of Smithwicks and a pint of Harp, Sean, please (to dull the stench of corruption outside). And while you're at it, four Black Russians.</p>
+                <p class="mb-4">And love was all around. Love of the truths shared in rocking the foundations. Coming, going, starting to leave. All the time trying to be faithful to an unhappy country.</p>
                 <p>And the band became all. Careers and studies were abandoned. PA, lights and instruments leased. Engineers and roadies hired (and highered - if you'll excuse the expression). The ballrooms of Ireland throbbwed to one, last capacity crowd. Summer of eighty-one and Sunday Morning was happening ten times a day on Radio 2. The lads gigging six nights a week from Donegal to Dublin.</p>    
             </div>
         </section>
@@ -94,7 +95,7 @@
                     work colleague of Mike Arrigan's, comes up with the name <i>The Fuze</i>.</p>
             </div>
 
-            <div class="m-8 flex pr-8">
+            <div class="m-8 mb-4 flex pr-8">
                 <div class="text-6xl hidden sm:block">&ldquo;</div>
                 <div class="flex-grow">
                     <p class="px-0 sm:px-8 text-sm leading-relaxed text-center">
@@ -108,6 +109,8 @@
                         And Roses' and 'Don't You Touch Me', but helped them
                         go down with The Jags 'I Got Your Number' and
                         Steve Millar's classic 'Swingtown.'
+                    </p>
+                    <p class="mt-4 px-0 sm:px-8 text-sm leading-relaxed text-center">
                         Afterwards I met up with this nameless group,
                         three of whose members are in UCG. I was told that
                         this was their first public appearance and that
@@ -131,7 +134,7 @@
         <section id="1980" class="text-gray-300 scrollsection py-8 bg-gray-900">
             <p class="text-white text-6xl mb-2 px-8">1980</p>
             <p class="text-lg text-gray-400 py-2 px-8">THE FUZE SET CAROUSEL ALIGHT</p>
-            <div class="m-8 flex pr-8">
+            <div class="m-8 mb-4 flex pr-8">
                 <div class="text-6xl hidden sm:block">&ldquo;</div>
                 <div class="flex-grow">
                     <p class="px-0 sm:px-8 text-sm leading-relaxed text-center">
@@ -152,11 +155,37 @@ even have another Boomtown Rats in the making..."
                 </div>
                 <div class="text-6xl relative hidden sm:block"><div class="absolute bottom-0">&rdquo;</div></div>
             </div>
+
             <p class="text-center"><b>- Munster Express, 1980</b></p>
 
+            <div class="grid grid-cols-1 sm:grid-cols-2 mt-8 mb-12 items-center bg-gray-800">
+                <img src="/images/1980.webp" class="" alt="Dave Fanning's Top 10 Rock Tracks"/>
+                <p class="text-center  p-8"><i>&ldquo;I&apos;ve my dreams set on writing and performing original songs&rdquo;</i> a 19-year-old Pat reveals in an interview. He does both with style.</p>
+            </div>
+            
+
+            <div class="m-8 mb-4 flex pr-8">
+                <div class="text-6xl hidden sm:block">&ldquo;</div>
+                <div class="flex-grow">
+                    <p class="pb-4 px-0 sm:px-8 text-sm leading-relaxed text-center">
+                        ON THEIR FIRST excursion outside Galway The Fuze walked away with first prize at the Tramore Band Competition which, among other things, landed them a record deal with Mulligan Records. On their second jaunt away from home they walk away with the prize for the best Dublin debut by any band, earning them this 'rave' review and probably the kiss-of-death. Together since November 79 they have established a very individual sound with definite influences from The Rats, U2 and even Madness in 'I Am A Soldier. Pat Coyne's lyrics and vocal style revealed considerable potential,
+                        <p class="px-0 sm:px-8 text-sm leading-relaxed text-center">
+                        especially when joined on vocals by guitarist Paul Gaughan. John Fitzpatrick's keyboards add a lot of colour and ideas to the sound especially on their upcoming single 'Stone Age Man. The even superior 'It's A Sunday Morning' is more typical of their overall modern Bowie influenced style, which can keep you dancing while listening to subtle underpinnings and off-beat themes. The Fuze have ideas and ability in abundance. Watch them go."
+
+                        
+
+                    </p>
+                </div>
+                <div class="text-6xl relative hidden sm:block"><div class="absolute bottom-0">&rdquo;</div></div>
+            </div>
+            <p class="text-center"><b>- Senan Turnbull, Hotpress, 1980</b><br/>(Review of gig in the Project Arts Centre, Dublin)</p>
         </section>
 
         <hr class="border-gray-700" />
+
+
+
+
 
 
     </div>
