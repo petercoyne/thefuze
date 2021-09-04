@@ -190,7 +190,8 @@
 					IT’S A SUNDAY MORNING. I remember being impressed with the last single from The Fuze and the same applies here. Written by the band’s lead vocalist Pat Coyne and bassist Mike Staunton, the song is a strong rock number that has that distinctive sound made by many Irish bands of this type. Is a definite Irish sound emerging? The Fuze have been touring Ireland for the past few weeks and you should catch their live act...				</p>
 			</Review>
 
-			<div class="flex flex-col sm:flex-row mt-12 mb-12 items-center bg-yellow-900 rounded-lg border border-yellow-700 mx-2">
+			<div class="flex flex-col sm:flex-row mt-12 mb-12 items-center bg-yellow-900 rounded-lg border border-yellow-700 mx-2 bg-no-repeat"
+			style="background-image: url('/images/vinyl.webp');">
 				<div class="p-8 flex-grow">
 					<div class="flex pb-4 mb-4 border-b border-yellow-700 justify-center">
 						<img src="/images/stoneageman.webp" class="h-12 rounded-sm mr-4" alt="Stone Age Man Cover"/>
@@ -231,7 +232,8 @@
 				</p>
 			</Review>
 
-			<div class="flex flex-col sm:flex-row mt-12 mb-12 items-center bg-yellow-900 rounded-lg border border-yellow-700 mx-2">
+			<div class="flex flex-col sm:flex-row mt-12 mb-12 items-center bg-yellow-900 rounded-lg border border-yellow-700 mx-2 bg-no-repeat"
+			style="background-image: url('/images/vinyl.webp');">
 				<div class="p-8 flex-grow">
 					<div class="flex pb-4 mb-4 border-b border-yellow-700 justify-center">
 						<img src="/images/sundaymorning.webp" class="h-12 rounded-sm mr-4" alt="Stone Age Man Cover"/>
