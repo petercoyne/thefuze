@@ -1,17 +1,40 @@
 <script>
-    import { onMount } from 'svelte'
+    import { onMount } from 'svelte';
     import { slide } from 'svelte/transition';
-    //import WaveSurfer from 'wavesurfer.js'
-    
-    // Create a WaveSurfer instance
+    import { track, playing } from '$lib/currentTrack.js';
+
     var wavesurfer;
-    
-    let currentTrack = -1;
+
     let currentTrackName = "🔊 Listen Now";
-    let hidePlayer = true;
     let isPlaying = false;
-    
+
     let showPlaylist = false;
+
+    $: $track, handleTrackChange();
+
+    function handleTrackChange() {
+        if ($track != -1) {
+            wavesurfer.load(tracks[$track].src);
+            currentTrackName = tracks[$track].name;
+        }
+    }
+
+    $: $playing, handlePlayPause();
+
+    function handlePlayPause() {
+        if ($playing == 0) {
+            wavesurfer.pause();
+        } else if ($playing == 1) {
+
+            if ($track == -1) {
+                track.set(0);
+                currentTrackName = tracks[0].name;
+                wavesurfer.load(tracks[0].src);
+            }
+
+            wavesurfer.play();
+        }
+    }
     
     let tracks = [
         { name: 'Its A Sunday Morning', length: '4:03', src: '/music/01-its-a-sunday-morning.mp3' },
@@ -37,27 +60,19 @@
     ];
     
     let playPause = () => {
-        if (currentTrack == -1) {
-            setCurrentSong(0);
-        }
         wavesurfer.playPause();
         isPlaying = wavesurfer.isPlaying();
     }
     
-    let setCurrentSong = function(index) {
-        hidePlayer = false;
-        currentTrack = index;
-        currentTrackName = tracks[index].name;
-        wavesurfer.load(tracks[index].src);
-    };
-    
     let ff = function() {
-        currentTrack = (currentTrack + 1) % tracks.length;
-        setCurrentSong(currentTrack);
+        playing.set(0);
+        track.update(n => ((n + 1) % tracks.length) );
     }
     let rw = function() {
-        currentTrack = (currentTrack - 1) % tracks.length;
-        setCurrentSong(currentTrack);
+        playing.set(0);
+        if ($track > 0) {
+            track.update(n => n - 1);
+        }
     }
     
     onMount(() => {
@@ -72,9 +87,7 @@
         });
     
         wavesurfer.on('ready', function() {
-            hidePlayer = false;
-            wavesurfer.play();
-            isPlaying = wavesurfer.isPlaying();
+            $playing = 1;
         });
     
         wavesurfer.on('error', function(e) {
@@ -102,8 +115,8 @@
             {#each tracks as { name, src }, i}
                 <li
                     class="cursor-pointer py-2 border-b border-gray-800 text-sm"
-                    class:bg-gray-800={i == currentTrack}
-                    on:click={() => setCurrentSong(i)}>
+                    class:bg-gray-800={i == $track}
+                    on:click={() => track.set(i)}>
                     <span class="text-gray-500 mr-2">{i + 1}</span> {name}
                 </li>
             {/each}
@@ -111,25 +124,27 @@
     </div>
     {/if}
 
-    <div class="sticky bottom-0 bg-black" style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
+    <div class="sticky bottom-0 bg-black md:py-2" style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;">
         <!-- <h6 class="text-gray-200 pb-3">Music</h6> -->
 
     
         <div class="flex items-center" transition:slide>
             
-            <button on:click={rw} class:text-gray-500={currentTrack <= 0}>
+            <button on:click={rw} class:text-gray-500={$track <= 0}>
                 <svg class="w-14 h-16 pl-4 py-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"></path></svg>
             </button>
     
-            <button id="playPause" on:click={playPause}>
-                {#if !isPlaying}
+            {#if $playing != 1}
+            <button id="playause" on:click={() => playing.set(1)}>
                 <svg class="w-14 h-16 p-2 px-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                {:else}
-                <svg class="w-14 h-16 p-2 px-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                {/if}
             </button>
+            {:else}
+            <button id="pause" on:click={() => playing.set(0)}>
+                <svg class="w-14 h-16 p-2 px-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </button>
+            {/if}
     
-            <button on:click={ff} class:text-gray-500={currentTrack + 1 >= tracks.length || currentTrack == -1}>
+            <button on:click={ff} class:text-gray-500={$track + 1 >= tracks.length || $track == -1}>
                 <svg class="w-14 h-16 py-3 pr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"></path></svg>
             </button>
 
@@ -144,8 +159,6 @@
                 transition:slide>
                 <!-- Here be waveform -->
             </div>
-    
-
 
             <div class="cursor-pointer text-gray-500 hover:text-blue-300 flex" on:click={togglePlaylist}>
                 <div class="hidden sm:flex flex-col justify-center h-16 text-xs cursor-pointer  ml-4" on:click={togglePlaylist}>
