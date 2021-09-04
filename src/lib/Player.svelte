@@ -6,7 +6,6 @@
     var wavesurfer;
 
     let currentTrackName = "🔊 Listen Now";
-    let isPlaying = false;
 
     let showPlaylist = false;
 
@@ -16,6 +15,9 @@
         if ($track != -1) {
             wavesurfer.load(tracks[$track].src);
             currentTrackName = tracks[$track].name;
+            if ($playing == 1) {
+                wavesurfer.play();
+            }
         }
     }
 
@@ -58,11 +60,6 @@
         { name: 'Look What Shes Done To Me (Live in Dublin)', length: '', src: '/music/19-look-what-shes-done-to-me-dublin.mp3' },
         { name: 'Shining Star (Live in Claremorris)', length: '', src: '/music/20-shining-star-claremorris.mp3' },
     ];
-    
-    let playPause = () => {
-        wavesurfer.playPause();
-        isPlaying = wavesurfer.isPlaying();
-    }
     
     let ff = function() {
         playing.set(0);
@@ -148,7 +145,7 @@
                 <svg class="w-14 h-16 py-3 pr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"></path></svg>
             </button>
 
-            <div class="cursor-pointer text-s px-0 h-16 flex flex-col justify-center pr-4 md:pl-6" on:click={playPause}>
+            <div class="cursor-pointer text-s px-0 h-16 flex flex-col justify-center pr-4 md:pl-6" on:click={() => playing.set(1)}>
                 <div class="text-xs uppercase text-gray-400">The Fuze</div>
                 <div class="text-xs sm:text-sm">{ currentTrackName }</div>
             </div>
