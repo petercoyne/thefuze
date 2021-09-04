@@ -5,7 +5,7 @@
     import { track, playing } from '$lib/currentTrack.js'
 </script>
 
-<p class="text-white text-4xl p-8">Track: {$track}, playing {$playing}</p>
+<!-- <p class="text-white text-4xl p-8">Track: {$track}, playing {$playing}</p> -->
 <Header />
 <slot></slot>
 <Player/>
