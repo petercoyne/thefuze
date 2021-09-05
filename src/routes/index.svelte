@@ -202,16 +202,16 @@
 						{#if $track != 7}
 							<button
 							on:click={() => track.set(7)}
-							class="bg-yellow-700 p-3 ml-4 rounded-lg" >▷ Play</button>
+							class="bg-yellow-700 p-3 ml-4 rounded-lg">▷ Play</button>
 						{:else}
 							{#if $playing}
 								<button
 								on:click={() => playing.set(false)}
-								class="bg-yellow-700 p-3 ml-4 rounded-lg" >Pause</button>
+								class="bg-yellow-700 p-3 ml-4 rounded-lg">Pause</button>
 							{:else}
 								<button
 								on:click={() => playing.set(true)}
-								class="bg-yellow-700 p-3 ml-4 rounded-lg" >Resume</button>
+								class="bg-yellow-700 p-3 ml-4 rounded-lg">Resume</button>
 							{/if}
 						{/if}
 					</div>
