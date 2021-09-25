@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 	import Photo from '$lib/Photo.svelte';
 	import Review from '$lib/Review.svelte';
-	import lazyLoad from '$lib/lazyload';
+	import Header from '$lib/Header.svelte';
 	import { track, playing } from '$lib/currentTrack.js';
 
 	const options = {
@@ -15,8 +15,12 @@
 	onMount(() => {
 		scrollSpy('#main-menu', options);
 	});
-</script> 
+	let y;
+</script>
 
+<svelte:window bind:scrollY={y}/>
+
+<Header bind:y />
 <img src="/band-bftp.jpg" alt="The Band" class="w-full mb-8"/>
 <div class="flex max-w-screen-lg mx-auto">
 	<div id="sidebar" transition:fade class="hidden md:block p-4 w-48 flex-shrink-0 text-gray-300">
