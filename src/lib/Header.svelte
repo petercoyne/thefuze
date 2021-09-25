@@ -2,7 +2,7 @@
     export let y;    
 </script>
 
-<div class="grid grid-rows-1 grid-cols-1 w-full h-screen">
+<div class="grid grid-rows-1 grid-cols-1 w-screen" style="height: calc(100vh - 4rem);">
     <img src="/bg2.webp" alt="background" class="w-full h-full object-cover"
         style="grid-row-start: 1; grid-column-start: 1; transform: translate(0,{.2*y}px); z-index: -10"/>
     <div class="logo-container flex w-full h-full justify-center pb-24" style="grid-row-start: 1; grid-column-start: 1">
