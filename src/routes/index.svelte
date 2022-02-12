@@ -302,7 +302,7 @@
 		<hr class="border-gray-700" />
 
 		<section id="lineup"  class="bg-cover bg-no-repeat bg-top pb-12 bg-gray-900 text-gray-300">
-			<div class="container pt-8 mx-12">
+			<div class="container pt-4 mx-4 md:pt-8 md:mx-12">
 				<img src="/logo.png" width="192" alt="The Fuze" class="self-center -ml-2 my-4"/>
 				<h4 class="text-xl uppercase text-gray-400">Band Line-up Throughout the years</h4>
 				
