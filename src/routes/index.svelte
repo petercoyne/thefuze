@@ -16,11 +16,42 @@
 		scrollSpy('#main-menu', options);
 	});
 	let y;
+
+	let menushow = false;
+	function toggleMobileMenu() {
+		menushow = !menushow;
+	}
 </script>
 
 <svelte:window bind:scrollY={y}/>
 
 <Header bind:y />
+
+<a on:click="{toggleMobileMenu}" id="mobilemenubutton" class="fixed border backdrop-blur border-gray-700 md:hidden z-50 top-0 right-0 bg-black bg-opacity-50 rounded-full p-4 m-4 hover:bg-white hover:bg-opacity-30 cursor-pointer transition-colors">
+	{#if !menushow}
+	<img src="/menu.svg" alt="" srcset="">
+	{:else}
+	<img src="/x.svg" alt="" srcset="">
+	{/if}
+</a>
+
+{#if menushow}
+<div id="mobilemenu" transition:fade on:click="{toggleMobileMenu}">
+	<nav id="mobile-menu" class="md:hidden top-8 left-8 right-24 rounded-2xl fixed p-8 bg-black bg-opacity-70 backdrop-blur-lg border border-gray-700">
+		<h5 class="text-sm text-gray-400 px-1">BIO</h5>
+		<a href="#thefuze" class="block text-xl my-2 px-1">The Fuze</a>
+		<a href="#timeline" class="block text-xl my-2 px-1">Timeline</a>
+		<div class="border-l-2 border-gray-300 leading-none mx-1">
+			<a href="#1977" class="block p-2 ml-2">1977<br/><span class="text-gray-400 text-xs">Starting with a Sunburst</span></a>
+			<a href="#1979" class="block p-2 ml-2">1979<br/><span class="text-gray-400 text-xs">Front Man Wanted</span></a>
+			<a href="#1980" class="block p-2 ml-2">1980<br/><span class="text-gray-400 text-xs">The Fuze Set Carousel Alight</span></a>
+			<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
+		</div>
+		<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
+	</nav>
+</div>
+{/if}
+
 <img src="/band-bftp.jpg" alt="The Band" class="w-full mb-8"/>
 <div class="flex max-w-screen-lg mx-auto">
 	<div id="sidebar" transition:fade class="hidden md:block p-4 w-48 flex-shrink-0 text-gray-300">
