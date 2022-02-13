@@ -301,7 +301,7 @@
 
 		<hr class="border-gray-700" />
 
-		<section id="lineup"  class="bg-cover bg-no-repeat bg-top pb-12 bg-gray-900 text-gray-300">
+		<section id="lineup" class="bg-cover bg-no-repeat bg-top pb-12 bg-gray-900 text-gray-300 overflow-hidden">
 			<div class="container pt-4 mx-4 md:pt-8 md:mx-12">
 				<img src="/logo.png" width="192" alt="The Fuze" class="self-center -ml-2 my-4"/>
 				<h4 class="text-xl uppercase text-gray-400">Band Line-up Throughout the years</h4>
@@ -309,53 +309,53 @@
 				<table>
 					<tr>
 						<td>
-							<h3 class="uppercase mt-6 text-white">Pat Coyne</h3>
+							<h3 class="text-sm uppercase mt-6 text-white">Pat Coyne</h3>
 							<p class="text-sm">Lead Vocals</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Paul Gaughan</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Paul Gaughan</h3>
 							<p class="text-sm">Guitar, Vocals</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Mike Staunton</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Mike Staunton</h3>
 							<p class="text-sm">Bass</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Mike Arrigan</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Mike Arrigan</h3>
 							<p class="text-sm">Drums, Percussion</p>
 						</td>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Barry Duffy</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Barry Duffy</h3>
 							<p class="text-sm">Drums, Percussion</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="uppercase mt-4 mr-6 text-white">John Fitzpatrick</h3>
+							<h3 class="text-sm uppercase mt-4 mr-6 text-white">John Fitzpatrick</h3>
 							<p class="text-sm">Keyboards, Vocals</p>
 						</td>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Eddie Lynch</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Eddie Lynch</h3>
 							<p class="text-sm">Keyboards</p>
 						</td>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Noel Furey</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Noel Furey</h3>
 							<p class="text-sm">Keyboards, Vocals</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Dave Fitzgerald</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Dave Fitzgerald</h3>
 							<p class="text-sm">Lead Guitar</p>
 						</td>
 						<td>
-							<h3 class="uppercase mt-4 text-white">Declan Kennedy</h3>
+							<h3 class="text-sm uppercase mt-4 text-white">Declan Kennedy</h3>
 							<p class="text-sm">Lead Guitar</p>
 						</td>
 					</tr>
