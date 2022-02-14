@@ -382,7 +382,7 @@
 			</div>
 		</section>
 
-		<hr class="border-gray-700" />
+		<hr class="border-gray-700 mt-12" />
 
 		<section id="buycd" class="scrollsection bg-gray-900 py-4">
 			<h1 class="text-gray-500 text-2xl uppercase mt-4 mx-8">Buy the CD</h1>
