@@ -109,7 +109,7 @@
     <div class="flex pt-6 overflow-auto overscroll-contain" transition:slide>
         <div class="hidden sm:block pl-6">
             <img src="bftp.jpg" alt="A Blast from the Past" class="w-24">
-            <!-- <p class="text-center"><a href="#" class="text-center my-4">Buy CD</a></p> -->
+            <p class="text-center"><a href="mailto:buycd@thefuze.ie?subject=Buy CD&body=Enter Your Name and Postal Address" class="text-center my-4">Buy CD</a></p>
         </div>
         <ul class="px-6 flex-grow">
             {#each tracks as { name, src }, i}

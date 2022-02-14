@@ -47,8 +47,8 @@
 			<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
 		</div>
 		<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
-		<h5 class="text-sm text-gray-400 px-1 mt-4">MEDIA</h5>
 		<a href="#videos" class="block text-xl my-2 px-1">Videos</a>
+		<a href="#buycd" class="block text-xl my-2 px-1">Buy CD</a>
 		<a href="#more" class="block text-xl my-2 px-1">More</a>
 	</nav>
 </div>
@@ -68,8 +68,8 @@
 				<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
 			</div>
 			<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
-			<h5 class="text-sm text-gray-400 px-1 mt-4">MEDIA</h5>
 			<a href="#videos" class="block text-xl my-2 px-1">Videos</a>
+			<a href="#buycd" class="block text-xl my-2 px-1">Buy CD</a>
 			<a href="#more" class="block text-xl my-2 px-1">More</a>
 		</nav>
 	</div>
@@ -374,35 +374,71 @@
 
 		<section id="videos" class="scrollsection">
 			<h1 class="text-gray-500 text-2xl uppercase my-8 mx-8">Videos</h1>
-			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/nhGWNWqhkgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/J8sD9cWyoHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/yqPAwqGTkik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/BWY6pUc7pEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+				<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/nhGWNWqhkgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/J8sD9cWyoHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/yqPAwqGTkik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/BWY6pUc7pEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
 		</section>
 
 		<hr class="border-gray-700" />
 
-		<section id="more" class="scrollsection bg-gray-900 py-8">
-			<h1 class="text-gray-500 text-2xl uppercase mb-4 mx-8">More</h1>
-			<div class="flex mx-8 mb-6">
-				<img src="/soundcloud.svg" width="48" alt="soundcloud"/>
-				<p class="ml-4 self-center"><a href="http://www.soundcloud.com/the-fuze-galway">4 rare recordings</a></p>
+		<section id="buycd" class="scrollsection bg-gray-900 py-4">
+			<h1 class="text-gray-500 text-2xl uppercase mt-4 mx-8">Buy the CD</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 text-gray-300">
+				<img src="/bftp-large.jpg" alt="The Fuze - A Blast From The Past" class="p-8 pb-0 md:pb-8"/>
+				<div class="self-center p-8">
+					<p>15 remastered studio recordings from the early eighties, including the hit singles <b class="font-bold text-white">It&#39;s a Sunday Morning</b> and <b class="font-bold text-white">Stone Age Man</b> plus five bonus live tracks.</p>
+					<a href="mailto:buycd@thefuze.ie?subject=Buy CD&body=Enter Your Name and Postal Address"
+					   class="inline-block bg-blue-600 text-white font-bold p-4 mt-4 rounded">
+						Buy Now
+					</a>
+				</div>
 			</div>
-			<div class="flex mx-8 my-4">
-				<img src="/Instagram.svg" width="48" alt="instagram"/>
-				<p class="ml-4 self-center"><a href="https://www.instagram.com/thefuzegalway/">Instagram Profile</a></p>
-			</div>
-			<div class="flex mx-8 my-4">
-				<img src="/spotify.png" width="48" alt="spotify"/>
-				<p class="ml-4 self-center"><a href="https://open.spotify.com/album/2LkjVxqnhvctqBHNcOOYrp?si=5mdHvuDBRcuVFrMp94FC7g">Listen on Spotify</a></p>
-			</div>
-			<div class="flex mx-8 mt-4">
-				<img src="/applemusic.png" width="48" alt="apple music"/>
-				<p class="ml-4 self-center"><a href="http://itunes.apple.com/album/id/1560559827">Listen on Apple Music</a></p>
-			</div>
-			<div class="flex mx-8 mt-4">
-				<img src="/link.png" width="48" alt="link"/>
-				<p class="ml-4 self-center"><a href="https://www.irishrock.org/irodb/bands/fuze1.html">Irish Rock Discography</a></p>
+		</section>
+
+		<hr class="border-gray-700" />
+
+		<section id="more" class="scrollsection py-8">
+			<h1 class="text-gray-500 text-2xl uppercase mx-8">More</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<a href="http://www.soundcloud.com/the-fuze-galway">
+					<div class="flex mx-8 mt-4">
+						<img src="/soundcloud.svg" width="48" alt="soundcloud" class="my-3"/>
+						<p class="ml-4 self-center">4 rare recordings</p>
+					</div>
+				</a>
+				<a href="https://www.instagram.com/thefuzegalway/">
+					<div class="flex mx-8 mt-4">
+						<img src="/Instagram.svg" width="48" alt="instagram"/>
+						<p class="ml-4 self-center">Instagram Profile</p>
+					</div>
+				</a>
+				<a href="https://open.spotify.com/album/2LkjVxqnhvctqBHNcOOYrp?si=5mdHvuDBRcuVFrMp94FC7g">
+					<div class="flex mx-8 mt-4">
+						<img src="/spotify.png" width="48" alt="spotify"/>
+						<p class="ml-4 self-center">Listen on Spotify</p>
+					</div>
+				</a>
+				<a href="http://itunes.apple.com/album/id/1560559827">
+					<div class="flex mx-8 mt-4">
+						<img src="/applemusic.png" width="48" alt="apple music"/>
+						<p class="ml-4 self-center">Listen on Apple Music</p>
+					</div>
+				</a>
+				<a href="https://www.irishrock.org/irodb/bands/fuze1.html">
+					<div class="flex mx-8 mt-4">
+						<img src="/link.png" width="48" alt="link"/>
+						<p class="ml-4 self-center">Irish Rock Discography</p>
+					</div>
+				</a>
+				<a href="https://www.google.com/search?q=the+fuze+galway">
+					<div class="flex mx-8 mt-4">
+						<img src="/link.png" width="48" alt="link"/>
+						<p class="ml-4 self-center">Explore More</p>
+					</div>
+				</a>
 			</div>
 		</section>
 
