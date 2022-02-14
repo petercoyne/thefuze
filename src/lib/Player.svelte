@@ -55,7 +55,7 @@
         { name: 'Space Boys Never Die', length: '', src: '/music/14-space-boys-never-die.mp3' },
         { name: 'Once In The Daytime', length: '', src: '/music/15-once-in-the-daytime.mp3' },
         { name: 'Mystical Forces (Live in Salthill)', length: '', src: '/music/16-mystical-forces-salthill.mp3' },
-        { name: 'Ive Heard Angels (Live in Maam Cross', length: '', src: '/music/17-ive-heard-angels-maam-cross.mp3' },
+        { name: 'Ive Heard Angels (Live in Maam Cross)', length: '', src: '/music/17-ive-heard-angels-maam-cross.mp3' },
         { name: 'Invasion (Live in Tramore)', length: '', src: '/music/18-invasion-tramore.mp3' },
         { name: 'Look What Shes Done To Me (Live in Dublin)', length: '', src: '/music/19-look-what-shes-done-to-me-dublin.mp3' },
         { name: 'Shining Star (Live in Claremorris)', length: '', src: '/music/20-shining-star-claremorris.mp3' },
@@ -109,7 +109,7 @@
     <div class="flex pt-6 overflow-auto overscroll-contain" transition:slide>
         <div class="hidden sm:block pl-6">
             <img src="bftp.jpg" alt="A Blast from the Past" class="w-24">
-            <p class="text-center"><a href="#" class="text-center my-4">Buy CD</a></p>
+            <!-- <p class="text-center"><a href="#" class="text-center my-4">Buy CD</a></p> -->
         </div>
         <ul class="px-6 flex-grow">
             {#each tracks as { name, src }, i}

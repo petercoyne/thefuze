@@ -1,7 +1,7 @@
 <script>
 	import scrollSpy from 'simple-scrollspy'
 	import { onMount } from 'svelte'
-	import { fade } from 'svelte/transition';
+	import { fade, slide } from 'svelte/transition';
 	import Photo from '$lib/Photo.svelte';
 	import Review from '$lib/Review.svelte';
 	import Header from '$lib/Header.svelte';
@@ -29,9 +29,9 @@
 
 <a on:click="{toggleMobileMenu}" id="mobilemenubutton" class="fixed border backdrop-blur border-gray-700 md:hidden z-50 top-4 right-0 bg-black bg-opacity-50 rounded-full p-4 m-4 hover:bg-white hover:bg-opacity-30 cursor-pointer transition-colors">
 	{#if !menushow}
-	<img src="/menu.svg" alt="" srcset="" width="24" height="24">
+	<img transition:slide src="/menu.svg" alt="" srcset="" width="24" height="24">
 	{:else}
-	<img src="/x.svg" alt="" srcset="" width="24" height="24">
+	<img transition:slide src="/x.svg" alt="" srcset="" width="24" height="24">
 	{/if}
 </a>
 
