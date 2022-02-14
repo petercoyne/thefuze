@@ -392,7 +392,7 @@
 					<p>15 remastered studio recordings from the early eighties, including the hit singles <b class="font-bold text-white">It&#39;s a Sunday Morning</b> and <b class="font-bold text-white">Stone Age Man</b> plus five bonus live tracks.</p>
 					<a href="mailto:buycd@thefuze.ie?subject=Buy CD&body=Enter Your Name and Postal Address"
 					   class="inline-block bg-blue-600 text-white font-bold p-4 mt-4 rounded">
-						Buy Now
+						Buy Now <span class="font-light text-blue-300">(&euro;10 + p&amp;p)</span>
 					</a>
 				</div>
 			</div>
