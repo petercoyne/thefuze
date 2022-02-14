@@ -389,7 +389,7 @@
 				<p class="ml-4 self-center"><a href="http://www.soundcloud.com/the-fuze-galway">4 rare recordings</a></p>
 			</div>
 			<div class="flex mx-8 my-4">
-				<img src="/instagram.svg" width="48" alt="instagram"/>
+				<img src="/Instagram.svg" width="48" alt="instagram"/>
 				<p class="ml-4 self-center"><a href="https://www.instagram.com/thefuzegalway/">Instagram Profile</a></p>
 			</div>
 			<div class="flex mx-8 my-4">
