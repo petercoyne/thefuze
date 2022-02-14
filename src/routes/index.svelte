@@ -47,6 +47,9 @@
 			<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
 		</div>
 		<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
+		<h5 class="text-sm text-gray-400 px-1 mt-4">MEDIA</h5>
+		<a href="#videos" class="block text-xl my-2 px-1">Videos</a>
+		<a href="#more" class="block text-xl my-2 px-1">More</a>
 	</nav>
 </div>
 {/if}
@@ -65,6 +68,9 @@
 				<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
 			</div>
 			<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
+			<h5 class="text-sm text-gray-400 px-1 mt-4">MEDIA</h5>
+			<a href="#videos" class="block text-xl my-2 px-1">Videos</a>
+			<a href="#more" class="block text-xl my-2 px-1">More</a>
 		</nav>
 	</div>
 
@@ -301,7 +307,7 @@
 
 		<hr class="border-gray-700" />
 
-		<section id="lineup" class="bg-cover bg-no-repeat bg-top pb-12 bg-gray-900 text-gray-300 overflow-hidden">
+		<section id="lineup" class="scrollsection pb-12 bg-gray-900 text-gray-300 overflow-hidden">
 			<div class="container pt-4 mx-4 md:pt-8 md:mx-12">
 				<img src="/logo.png" width="192" alt="The Fuze" class="self-center -ml-2 my-4"/>
 				<h4 class="text-xl uppercase text-gray-400">Band Line-up Throughout the years</h4>
@@ -362,6 +368,42 @@
 				</table>
 			</div>
 
+		</section>
+
+		<hr class="border-gray-700" />
+
+		<section id="videos" class="scrollsection">
+			<h1 class="text-gray-500 text-2xl uppercase my-8 mx-8">Videos</h1>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/nhGWNWqhkgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/J8sD9cWyoHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/yqPAwqGTkik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/BWY6pUc7pEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+		</section>
+
+		<hr class="border-gray-700" />
+
+		<section id="more" class="scrollsection bg-gray-900 py-8">
+			<h1 class="text-gray-500 text-2xl uppercase mb-4 mx-8">More</h1>
+			<div class="flex mx-8 mb-6">
+				<img src="/soundcloud.svg" width="48" alt="soundcloud"/>
+				<p class="ml-4 self-center"><a href="http://www.soundcloud.com/the-fuze-galway">4 rare recordings</a></p>
+			</div>
+			<div class="flex mx-8 my-4">
+				<img src="/instagram.svg" width="48" alt="instagram"/>
+				<p class="ml-4 self-center"><a href="https://www.instagram.com/thefuzegalway/">Instagram Profile</a></p>
+			</div>
+			<div class="flex mx-8 my-4">
+				<img src="/spotify.png" width="48" alt="spotify"/>
+				<p class="ml-4 self-center"><a href="https://open.spotify.com/album/2LkjVxqnhvctqBHNcOOYrp?si=5mdHvuDBRcuVFrMp94FC7g">Listen on Spotify</a></p>
+			</div>
+			<div class="flex mx-8 mt-4">
+				<img src="/applemusic.png" width="48" alt="apple music"/>
+				<p class="ml-4 self-center"><a href="http://itunes.apple.com/album/id/1560559827">Listen on Apple Music</a></p>
+			</div>
+			<div class="flex mx-8 mt-4">
+				<img src="/link.png" width="48" alt="link"/>
+				<p class="ml-4 self-center"><a href="https://www.irishrock.org/irodb/bands/fuze1.html">Irish Rock Discography</a></p>
+			</div>
 		</section>
 
 		<hr class="border-gray-700" />
