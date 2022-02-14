@@ -16,11 +16,44 @@
 		scrollSpy('#main-menu', options);
 	});
 	let y;
+
+	let menushow = false;
+	function toggleMobileMenu() {
+		menushow = !menushow;
+	}
 </script>
 
 <svelte:window bind:scrollY={y}/>
 
 <Header bind:y />
+
+<a on:click="{toggleMobileMenu}" id="mobilemenubutton" class="fixed border backdrop-blur border-gray-700 md:hidden z-50 top-4 right-0 bg-black bg-opacity-50 rounded-full p-4 m-4 hover:bg-white hover:bg-opacity-30 cursor-pointer transition-colors">
+	{#if !menushow}
+	<img src="/menu.svg" alt="" srcset="" width="24" height="24">
+	{:else}
+	<img src="/x.svg" alt="" srcset="" width="24" height="24">
+	{/if}
+</a>
+
+{#if menushow}
+<div id="mobilemenu" transition:fade on:click="{toggleMobileMenu}">
+	<nav id="mobile-menu" class="md:hidden top-8 left-8 right-24 rounded-2xl fixed p-8 bg-black bg-opacity-70 backdrop-blur-lg border border-gray-700">
+		<a href="#thefuze" class="block text-xl my-2 px-1">The Fuze</a>
+		<a href="#timeline" class="block text-xl my-2 px-1">Timeline</a>
+		<div class="border-l-2 border-gray-300 leading-none mx-1">
+			<a href="#1977" class="block p-2 ml-2">1977<br/><span class="text-gray-400 text-xs">Starting with a Sunburst</span></a>
+			<a href="#1979" class="block p-2 ml-2">1979<br/><span class="text-gray-400 text-xs">Front Man Wanted</span></a>
+			<a href="#1980" class="block p-2 ml-2">1980<br/><span class="text-gray-400 text-xs">The Fuze Set Carousel Alight</span></a>
+			<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
+		</div>
+		<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
+		<h5 class="text-sm text-gray-400 px-1 mt-4">MEDIA</h5>
+		<a href="#videos" class="block text-xl my-2 px-1">Videos</a>
+		<a href="#more" class="block text-xl my-2 px-1">More</a>
+	</nav>
+</div>
+{/if}
+
 <img src="/band-bftp.jpg" alt="The Band" class="w-full mb-8"/>
 <div class="flex max-w-screen-lg mx-auto">
 	<div id="sidebar" transition:fade class="hidden md:block p-4 w-48 flex-shrink-0 text-gray-300">
@@ -35,6 +68,9 @@
 				<a href="#1981" class="block p-2 ml-2">1981<br/><span class="text-gray-400 text-xs">The Fuze is Lit</span></a>
 			</div>
 			<a href="#lineup" class="block text-xl my-2 px-1">Lineup</a>
+			<h5 class="text-sm text-gray-400 px-1 mt-4">MEDIA</h5>
+			<a href="#videos" class="block text-xl my-2 px-1">Videos</a>
+			<a href="#more" class="block text-xl my-2 px-1">More</a>
 		</nav>
 	</div>
 
@@ -271,9 +307,108 @@
 
 		<hr class="border-gray-700" />
 
+		<section id="lineup" class="scrollsection pb-12 bg-gray-900 text-gray-300 overflow-hidden">
+			<div class="container pt-4 mx-4 md:pt-8 md:mx-12">
+				<img src="/logo.png" width="192" alt="The Fuze" class="self-center -ml-2 my-4"/>
+				<h4 class="text-xl uppercase text-gray-400">Band Line-up Throughout the years</h4>
+				
+				<table>
+					<tr>
+						<td>
+							<h3 class="text-sm uppercase mt-6 text-white">Pat Coyne</h3>
+							<p class="text-sm">Lead Vocals</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Paul Gaughan</h3>
+							<p class="text-sm">Guitar, Vocals</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Mike Staunton</h3>
+							<p class="text-sm">Bass</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Mike Arrigan</h3>
+							<p class="text-sm">Drums, Percussion</p>
+						</td>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Barry Duffy</h3>
+							<p class="text-sm">Drums, Percussion</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="text-sm uppercase mt-4 mr-6 text-white">John Fitzpatrick</h3>
+							<p class="text-sm">Keyboards, Vocals</p>
+						</td>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Eddie Lynch</h3>
+							<p class="text-sm">Keyboards</p>
+						</td>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Noel Furey</h3>
+							<p class="text-sm">Keyboards, Vocals</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Dave Fitzgerald</h3>
+							<p class="text-sm">Lead Guitar</p>
+						</td>
+						<td>
+							<h3 class="text-sm uppercase mt-4 text-white">Declan Kennedy</h3>
+							<p class="text-sm">Lead Guitar</p>
+						</td>
+					</tr>
+				</table>
+			</div>
 
+		</section>
 
+		<hr class="border-gray-700" />
 
+		<section id="videos" class="scrollsection">
+			<h1 class="text-gray-500 text-2xl uppercase my-8 mx-8">Videos</h1>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/nhGWNWqhkgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/J8sD9cWyoHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/yqPAwqGTkik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+			<iframe style="width: 100%; aspect-ratio: 4 / 3;" src="https://www.youtube.com/embed/BWY6pUc7pEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+		</section>
+
+		<hr class="border-gray-700" />
+
+		<section id="more" class="scrollsection bg-gray-900 py-8">
+			<h1 class="text-gray-500 text-2xl uppercase mb-4 mx-8">More</h1>
+			<div class="flex mx-8 mb-6">
+				<img src="/soundcloud.svg" width="48" alt="soundcloud"/>
+				<p class="ml-4 self-center"><a href="http://www.soundcloud.com/the-fuze-galway">4 rare recordings</a></p>
+			</div>
+			<div class="flex mx-8 my-4">
+				<img src="/instagram.svg" width="48" alt="instagram"/>
+				<p class="ml-4 self-center"><a href="https://www.instagram.com/thefuzegalway/">Instagram Profile</a></p>
+			</div>
+			<div class="flex mx-8 my-4">
+				<img src="/spotify.png" width="48" alt="spotify"/>
+				<p class="ml-4 self-center"><a href="https://open.spotify.com/album/2LkjVxqnhvctqBHNcOOYrp?si=5mdHvuDBRcuVFrMp94FC7g">Listen on Spotify</a></p>
+			</div>
+			<div class="flex mx-8 mt-4">
+				<img src="/applemusic.png" width="48" alt="apple music"/>
+				<p class="ml-4 self-center"><a href="http://itunes.apple.com/album/id/1560559827">Listen on Apple Music</a></p>
+			</div>
+			<div class="flex mx-8 mt-4">
+				<img src="/link.png" width="48" alt="link"/>
+				<p class="ml-4 self-center"><a href="https://www.irishrock.org/irodb/bands/fuze1.html">Irish Rock Discography</a></p>
+			</div>
+		</section>
+
+		<hr class="border-gray-700" />
+
+		<p class="text-gray-300 text-sm text-center my-12">&copy; 2022 The Fuze</p>
 	</div>
 
 </div>
