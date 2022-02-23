@@ -400,7 +400,7 @@
 
 		<hr class="border-gray-700" />
 
-		<section id="more" class="scrollsection py-8">
+		<section id="more" class="scrollsection pt-8 pb-12">
 			<h1 class="text-gray-500 text-2xl uppercase mx-8">More</h1>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 				<a href="http://www.soundcloud.com/the-fuze-galway">
@@ -444,7 +444,7 @@
 
 		<hr class="border-gray-700" />
 
-		<p class="text-gray-300 text-sm text-center my-12">&copy; 2022 The Fuze</p>
+		<p class="text-gray-300 text-sm text-center my-12">&copy; 2022 The Fuze. Site by <a href="https://splice.ie/">splice.ie.</a></p>
 	</div>
 
 </div>
