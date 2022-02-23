@@ -54,7 +54,7 @@
 </div>
 {/if}
 
-<img src="/band-bftp.jpg" alt="The Band" class="w-full mb-8"/>
+<img src="/band-bftp.webp" alt="The Band" class="w-full mb-8"/>
 <div class="flex max-w-screen-lg mx-auto">
 	<div id="sidebar" transition:fade class="hidden md:block p-4 w-48 flex-shrink-0 text-gray-300">
 		<nav id="main-menu" class="p-4 pr-0 pt-12 sticky top-0">
@@ -387,7 +387,7 @@
 		<section id="buycd" class="scrollsection bg-gray-900 py-4">
 			<h1 class="text-gray-500 text-2xl uppercase mt-4 mx-8">Buy the CD</h1>
 			<div class="grid grid-cols-1 md:grid-cols-2 text-gray-300">
-				<img src="/bftp-large.jpg" alt="The Fuze - A Blast From The Past" class="p-8 pb-0 md:pb-8"/>
+				<img src="/bftp-large.webp" alt="The Fuze - A Blast From The Past" class="p-8 pb-0 md:pb-8"/>
 				<div class="self-center p-8">
 					<p>15 remastered studio recordings from the early eighties, including the hit singles <b class="font-bold text-white">It&#39;s a Sunday Morning</b> and <b class="font-bold text-white">Stone Age Man</b> plus five bonus live tracks.</p>
 					<a href="mailto:buycd@thefuze.ie?subject=Buy CD&body=Enter Your Name and Postal Address"
