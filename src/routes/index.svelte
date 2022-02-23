@@ -94,7 +94,7 @@
 					You've gotta remember the late seventies and early eighties - because a fierce lot can't. The whole Galway of the Vibes thing birthing free-range students from its universal Cellar Bar, Lounge or Downstairs. Pre-conscious consciousness at its purest. Seven pints and a glass of Guinness. Two pints of Smithwicks and a pint of Harp, Sean, please (to dull the stench of corruption outside). And while you're at it, four Black Russians.
 				</div>
 				<p class="mb-4">And love was all around. Love of the truths shared in rocking the foundations. Coming, going, starting to leave. All the time trying to be faithful to an unhappy country.</p>
-				<p>And the band became all. Careers and studies were abandoned. PA, lights and instruments leased. Engineers and roadies hired (and highered - if you'll excuse the expression). The ballrooms of Ireland throbbwed to one, last capacity crowd. Summer of eighty-one and Sunday Morning was happening ten times a day on Radio 2. The lads gigging six nights a week from Donegal to Dublin.</p>    
+				<p>And the band became all. Careers and studies were abandoned. PA, lights and instruments leased. Engineers and roadies hired (and highered - if you'll excuse the expression). The ballrooms of Ireland throbbed to one, last capacity crowd. Summer of eighty-one and Sunday Morning was happening ten times a day on Radio 2. The lads gigging six nights a week from Donegal to Dublin.</p>    
 			</div>
 		</section>
 
@@ -217,13 +217,13 @@
 			<p class="text-lg text-gray-400 py-2 px-8">THE FUZE IS LIT</p>
 			<Review author="Western People" date="1981">
 				<p class=" leading-6">
-					<span class="uppercase text-gray-300 font-bold">THE FUZE IS LIT.</span> The west’s newest band is all set for it’s debut appearence on the ballroom circuit on Sunday night next, March 1st. The zealous new five-piece have been achieving quite a reputation for itself in the past fifteen months, and their first single ‘Stone Age Man’ is due for release this week. Describing themselves a ‘pop/new wave’ group, they will now include more covers along with their original material to suit the wider appeal of the ballroom circuit. Some weeks ago the boys made their debut on RTE’s ‘Anything Goes’ and Radio 2 rockster Dave Fanning has featured The Fuze on his radio show on numerous
+					<span class="uppercase text-gray-300 font-bold">THE FUZE IS LIT.</span> The west’s newest band is all set for it’s debut appearance on the ballroom circuit on Sunday night next, March 1st. The zealous new five-piece have been achieving quite a reputation for itself in the past fifteen months, and their first single ‘Stone Age Man’ is due for release this week. Describing themselves a ‘pop/new wave’ group, they will now include more covers along with their original material to suit the wider appeal of the ballroom circuit. Some weeks ago the boys made their debut on RTE’s ‘Anything Goes’ and Radio 2 rockstar Dave Fanning has featured The Fuze on his radio show on numerous
 					occasions. Now that The Fuze is lit, just wait for the explosion!
 					– Western People 1981
 				</p>
 			</Review>
 
-			<p class="px-8 text-md my-12 leading-6"><Photo description="The Fuze" src="/images/1981.webp" align="left"/>With the departure of guitarist Dave Fitzgerald to study art, the now-five-piece Fuze launch themselves on an unsuspecting ballroom circuit. Our heroes adopt a suitably serious pose to mark the occasion while neither John Fitz nor Stan betrays any unusual nervousness at the prospect of ‘debuting’ in their home town<br/><br/></p>
+			<p class="px-8 text-md my-12 leading-6"><Photo description="The Fuze" src="/images/1981.webp" align="left"/>With the departure of guitarist Dave Fitzgerald to study art, the now-five-piece Fuze launch themselves on an unsuspecting ballroom circuit. Our heroes adopt a suitably serious pose to mark the occasion while neither John Fitz nor Stan betrays any unusual nervousness at the prospect of ‘debuting’ in their home town<br/><br/><br/></p>
 
 			<Review author="RTE Guide" date="July 1981">
 				<p>
