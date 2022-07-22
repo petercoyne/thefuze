@@ -1,49 +1,50 @@
 @tailwind base;
 /* Write your global styles here, in PostCSS syntax */
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-    background-color: #000;
-    overflow-x: hidden;
-    /* font-family: Inter; */
+	background-color: #000;
+	overflow-x: hidden;
+	/* font-family: Inter; */
 }
 .fuzestroke {
-    text-shadow:
-       -1px -1px 0 #FFF,  
-        1px -1px 0 #FFF,
-       -1px  1px 0 #FFF,
-        1px  1px 0 #FFF;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
+
+#player-main::-webkit-scrollbar {
+	display: none;
+}
+
 h6 {
-    text-transform: uppercase;
-    font-size: 9pt;
+	text-transform: uppercase;
+	font-size: 9pt;
 }
 h2 {
-    font-size: 24pt;
-    font-weight: bold;
-    margin-top: 2rem;
-    line-height: 1.2;
+	font-size: 24pt;
+	font-weight: bold;
+	margin-top: 2rem;
+	line-height: 1.2;
 }
 p {
-    line-height: 1.75;
-    font-weight: 300;
+	line-height: 1.75;
+	font-weight: 300;
 }
 
 .nav-active {
-    @apply bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25;
+	@apply bg-white bg-opacity-50 hover:bg-black hover:bg-opacity-25;
 }
 .nav-link {
-    @apply flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25;
+	@apply flex items-center p-2 rounded-md hover:bg-black hover:bg-opacity-25;
 }
 
 nav .active {
-    @apply bg-gray-800 rounded-md;
+	@apply bg-gray-800 rounded-md;
 }
 
 a {
-    @apply text-blue-400;
-    /* color: #11A8E7 */
+	@apply text-blue-400;
+	/* color: #11A8E7 */
 }
 @tailwind components;
 @tailwind utilities;

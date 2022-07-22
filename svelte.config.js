@@ -1,17 +1,19 @@
-import preprocess from "svelte-preprocess";
+import preprocess from 'svelte-preprocess';
 import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-    kit: {
+	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		//target: '#svelte',
-        adapter: vercel()
+		adapter: vercel()
 	},
 
-    preprocess: [preprocess({
-        "postcss": true
-    })]
+	preprocess: [
+		preprocess({
+			postcss: true
+		})
+	]
 };
 
 export default config;
