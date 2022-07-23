@@ -1,4 +1,3 @@
 <script>
-    export let year, ;
+	export let year;
 </script>
-
