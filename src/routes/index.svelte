@@ -455,6 +455,7 @@
 			<h1 class="text-gray-500 text-2xl uppercase my-8 mx-8">Videos</h1>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
 				<iframe
+					loading="lazy"
 					style="width: 100%; aspect-ratio: 4 / 3;"
 					src="https://www.youtube.com/embed/nhGWNWqhkgI"
 					title="YouTube video player"
@@ -463,6 +464,7 @@
 					allowfullscreen
 				/>
 				<iframe
+					loading="lazy"
 					style="width: 100%; aspect-ratio: 4 / 3;"
 					src="https://www.youtube.com/embed/J8sD9cWyoHk"
 					title="YouTube video player"
@@ -471,6 +473,7 @@
 					allowfullscreen
 				/>
 				<iframe
+					loading="lazy"
 					style="width: 100%; aspect-ratio: 4 / 3;"
 					src="https://www.youtube.com/embed/yqPAwqGTkik"
 					title="YouTube video player"
@@ -479,6 +482,7 @@
 					allowfullscreen
 				/>
 				<iframe
+					loading="lazy"
 					style="width: 100%; aspect-ratio: 4 / 3;"
 					src="https://www.youtube.com/embed/BWY6pUc7pEY"
 					title="YouTube video player"
