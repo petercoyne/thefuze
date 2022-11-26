@@ -5,7 +5,7 @@
 	import Photo from '$lib/Photo.svelte';
 	import Review from '$lib/Review.svelte';
 	import Header from '$lib/Header.svelte';
-	import { track, playing } from '$lib/currentTrack.js';
+	import { track, playing, showPlaylist } from '$lib/currentTrack.js';
 
 	const options = {
 		sectionClass: '.scrollsection', // Query selector to your sections
@@ -20,6 +20,9 @@
 	let menushow = false;
 	function toggleMobileMenu() {
 		menushow = !menushow;
+		if ($showPlaylist) {
+			$showPlaylist = false;
+		}
 	}
 </script>
 

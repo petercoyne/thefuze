@@ -1,13 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import { track, playing } from '$lib/currentTrack.js';
+	import { track, playing, showPlaylist } from '$lib/currentTrack.js';
 
 	var wavesurfer; // wavesurfer instance
 
 	let currentTrackName = '🔊 Listen Now';
 
-	let showPlaylist = false;
+	$showPlaylist = false;
 
 	$: $track, handleTrackChange();
 
@@ -114,7 +114,7 @@
 	});
 
 	let togglePlaylist = function () {
-		showPlaylist = !showPlaylist;
+		$showPlaylist = !$showPlaylist;
 	};
 </script>
 
@@ -123,7 +123,7 @@
 	class="border-t border-gray-700 bg-black text-white fixed bottom-0 right-0 left-0 z-30 overflow-y-scroll max-h-screen"
 	style="background-image: url('bg-gradient.png'); background-repeat: repeat-x;"
 >
-	{#if showPlaylist}
+	{#if $showPlaylist}
 		<div class="flex pt-6 overflow-auto overscroll-contain" transition:slide>
 			<div class="hidden sm:block pl-6">
 				<img src="bftp.jpg" alt="A Blast from the Past" class="w-24" />
@@ -243,7 +243,7 @@
 				<div class="hidden sm:flex flex-col justify-center h-16 text-xs cursor-pointer ml-4">
 					<div>track list</div>
 				</div>
-				{#if showPlaylist}
+				{#if $showPlaylist}
 					<!-- <svg class="w-8 h-8 ml-4" fill="none" stroke="red" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> -->
 					<svg
 						class="w-16 h-16 p-4 md:mr-3"
