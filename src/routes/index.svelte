@@ -5,6 +5,7 @@
 	import Photo from '$lib/Photo.svelte';
 	import Review from '$lib/Review.svelte';
 	import Header from '$lib/Header.svelte';
+	import Visibility from '$lib/Visibility.svelte';
 	import { track, playing, showPlaylist } from '$lib/currentTrack.js';
 
 	const options = {
@@ -23,6 +24,11 @@
 		if ($showPlaylist) {
 			$showPlaylist = false;
 		}
+	}
+
+	let videoshow = false;
+	function showVideos() {
+		videoshow = true;
 	}
 </script>
 
@@ -456,43 +462,50 @@
 
 		<section id="videos" class="scrollsection">
 			<h1 class="text-gray-500 text-2xl uppercase my-8 mx-8">Videos</h1>
+			{#if !videoshow}
+				<button class="text-blue-400 bg-blue-900 border rounded-md mx-8 p-8" on:click={showVideos}
+					>Show all videos</button
+				>
+			{/if}
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-				<iframe
-					loading="lazy"
-					style="width: 100%; aspect-ratio: 4 / 3;"
-					src="https://www.youtube.com/embed/nhGWNWqhkgI"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-				<iframe
-					loading="lazy"
-					style="width: 100%; aspect-ratio: 4 / 3;"
-					src="https://www.youtube.com/embed/J8sD9cWyoHk"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-				<iframe
-					loading="lazy"
-					style="width: 100%; aspect-ratio: 4 / 3;"
-					src="https://www.youtube.com/embed/yqPAwqGTkik"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-				<iframe
-					loading="lazy"
-					style="width: 100%; aspect-ratio: 4 / 3;"
-					src="https://www.youtube.com/embed/BWY6pUc7pEY"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
+				{#if videoshow}
+					<iframe
+						loading="lazy"
+						style="width: 100%; aspect-ratio: 4 / 3;"
+						src="https://www.youtube.com/embed/nhGWNWqhkgI"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+					<iframe
+						loading="lazy"
+						style="width: 100%; aspect-ratio: 4 / 3;"
+						src="https://www.youtube.com/embed/J8sD9cWyoHk"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+					<iframe
+						loading="lazy"
+						style="width: 100%; aspect-ratio: 4 / 3;"
+						src="https://www.youtube.com/embed/yqPAwqGTkik"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+					<iframe
+						loading="lazy"
+						style="width: 100%; aspect-ratio: 4 / 3;"
+						src="https://www.youtube.com/embed/BWY6pUc7pEY"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				{/if}
 			</div>
 		</section>
 
