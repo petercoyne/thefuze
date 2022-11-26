@@ -5,7 +5,6 @@
 	import Photo from '$lib/Photo.svelte';
 	import Review from '$lib/Review.svelte';
 	import Header from '$lib/Header.svelte';
-	import Visibility from '$lib/Visibility.svelte';
 	import { track, playing, showPlaylist } from '$lib/currentTrack.js';
 
 	const options = {
